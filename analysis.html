@@ -1,0 +1,129 @@
+<html>
+  <head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>Web Service Detailed Analysis</title>
+	<meta name="author" content="Abhinav Soni">
+	<!-- CSS -->
+    <link href="css/analysisPage.css" rel="stylesheet">
+	
+		  <!-- Daily Report -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data1 = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Up & Running',     21],
+          ['Down',      3]
+        ]);
+
+        var options1 = {
+          title: 'Daily Report:',
+          pieHole: 0.4,
+		  slices: {
+            0: { color: '#21C862' },
+            1: { color: '#FF5733' }
+          }
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart1'));
+        chart.draw(data1, options1);
+      }
+    </script>
+	
+		  <!-- Weekly Report -->
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data1 = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Up & Running',     18],
+          ['Down',      6]
+        ]);
+
+        var options1 = {
+          title: 'Weekly Report:',
+          pieHole: 0.4,
+		  slices: {
+            0: { color: '#21C862' },
+            1: { color: '#FF5733' }
+          }
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart2'));
+        chart.draw(data1, options1);
+      }
+    </script>
+	
+		  <!-- Monthly Report -->
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data1 = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Up & Running',     12],
+          ['Down',      12]
+        ]);
+
+        var options1 = {
+          title: 'Monthly Report:',
+          pieHole: 0.4,
+		  slices: {
+            0: { color: '#21C862' },
+            1: { color: '#FF5733' }
+          },
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart3'));
+        chart.draw(data1, options1);
+      }
+    </script>
+	
+		  <!-- Step Report -->
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['line']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Time', 'Up'],
+          ['Jun-10-2020 12:33:04',  1],
+          ['Jun-10-2020 13:33:04',  1],
+          ['Jun-10-2020 14:33:04',  0],
+          ['Jun-10-2020 15:33:04',  0],
+		  ['Jun-10-2020 16:33:04',  1],
+		  ['Jun-10-2020 17:33:04',  1],
+		  ['Jun-10-2020 18:33:04',  0],
+		  ['Jun-10-2020 19:33:04',  1]
+        ]);
+
+        var options = {
+          title: 'Web Service Performance',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+	<div id="top_container" class="container">
+		<div id="donutchart1" class="left"></div>
+		<div id="donutchart2" class="center"></div>
+		<div id="donutchart3" class="right"></div>
+	</div>
+	<div id="curve_chart" class="container"></div>
+  </body>
+</html>
