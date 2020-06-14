@@ -1,7 +1,7 @@
 /* Custom styles */
 .analysis_on_off_chart{
 	height:300px;
-	width:100%;
+	width:1000px;
 	text-align:center;
 	overflow-x: scroll;
 }
