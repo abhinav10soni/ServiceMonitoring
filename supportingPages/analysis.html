@@ -7,7 +7,7 @@
 	<title>Web Service Detailed Analysis</title>
 	<meta name="author" content="Abhinav Soni">
 	<!-- CSS -->
-    <link href="css/analysisPage.css" rel="stylesheet">
+    <link href="../css/analysisPage.css" rel="stylesheet">
 	
 		  <!-- Daily Report -->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -90,7 +90,7 @@
 		  <!-- Step Report -->
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
-      google.charts.load('current', {'packages':['line']});
+      google.charts.load("current", {packages:["imagelinechart"]});
       google.charts.setOnLoadCallback(drawChart);
 
       function drawChart() {
@@ -112,18 +112,21 @@
           legend: { position: 'bottom' }
         };
 
-        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+        var chart = new google.visualization.ImageLineChart(document.getElementById('chart_div'));
 
         chart.draw(data, options);
       }
     </script>
   </head>
   <body>
+	<h2 class="analysis_container">Name of Web Service</h2>
 	<div id="top_container" class="analysis_container">
 		<div id="donutchart1" class="analysis_left"></div>
 		<div id="donutchart2" class="analysis_center"></div>
 		<div id="donutchart3" class="analysis_right"></div>
 	</div>
-	<div id="curve_chart" class="analysis_container"></div>
+	<div id="bottom_container" class="analysis_container">
+		<div id="chart_div" class="analysis_container"></div>
+	</div>
   </body>
 </html>
