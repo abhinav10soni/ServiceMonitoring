@@ -103,6 +103,22 @@
 		  ['Jun-10-2020 16:33:04',  1],
 		  ['Jun-10-2020 17:33:04',  1],
 		  ['Jun-10-2020 18:33:04',  0],
+		  ['Jun-10-2020 19:33:04',  1],
+		  ['Jun-10-2020 12:33:04',  1],
+          ['Jun-10-2020 13:33:04',  1],
+          ['Jun-10-2020 14:33:04',  0],
+          ['Jun-10-2020 15:33:04',  0],
+		  ['Jun-10-2020 16:33:04',  1],
+		  ['Jun-10-2020 17:33:04',  1],
+		  ['Jun-10-2020 18:33:04',  0],
+		  ['Jun-10-2020 19:33:04',  1],
+		  ['Jun-10-2020 12:33:04',  1],
+          ['Jun-10-2020 13:33:04',  1],
+          ['Jun-10-2020 14:33:04',  0],
+          ['Jun-10-2020 15:33:04',  0],
+		  ['Jun-10-2020 16:33:04',  1],
+		  ['Jun-10-2020 17:33:04',  1],
+		  ['Jun-10-2020 18:33:04',  0],
 		  ['Jun-10-2020 19:33:04',  1]
         ]);
 
@@ -112,7 +128,7 @@
           legend: { position: 'bottom' }
         };
 
-        var chart = new google.visualization.ImageLineChart(document.getElementById('chart_div'));
+        var chart = new google.visualization.ImageLineChart(document.getElementById('on_off_chart'));
 
         chart.draw(data, options);
       }
@@ -125,8 +141,6 @@
 		<div id="donutchart2" class="analysis_center"></div>
 		<div id="donutchart3" class="analysis_right"></div>
 	</div>
-	<div id="bottom_container" class="analysis_container">
-		<div id="chart_div" class="analysis_container"></div>
-	</div>
+	<div id="on_off_chart" class="analysis_on_off_chart"></div>
   </body>
 </html>

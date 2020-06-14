@@ -1,4 +1,11 @@
 /* Custom styles */
+.analysis_on_off_chart{
+	height:300px;
+	width:100%;
+	text-align:center;
+	overflow-x: scroll;
+}
+
 .analysis_container {
 	width:100%;
     text-align:center;
