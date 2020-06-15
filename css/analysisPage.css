@@ -1,6 +1,6 @@
 /* Custom styles */
 .analysis_on_off_chart{
-	height:300px;
+	height:40%;
 	width:1000px;
 	text-align:center;
 	overflow-x: scroll;
@@ -13,19 +13,19 @@
 
 .analysis_left {
     float:left;
-    width:500px;
-    height:300px;
+    width:33.3%;
+    height:40%;
 }
 
 .analysis_center {
     display: inline-block;
     margin:0 auto;
-    width:500px;
-    height:300px;
+    width:33.3%;
+    height:40%;
 }
 
 .analysis_right {
     float:right;
-    width:500px;
-    height:300px;
+    width:33.3%;
+    height:40%;
 }
