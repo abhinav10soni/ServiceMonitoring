@@ -90,7 +90,7 @@
 		  <!-- Step Report -->
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
-      google.charts.load("current", {packages:["imagelinechart"]});
+      google.charts.load('current', {'packages':['line']});
       google.charts.setOnLoadCallback(drawChart);
 
       function drawChart() {
@@ -135,8 +135,7 @@
           curveType: 'function',
           legend: { position: 'bottom' }
         };
-
-        var chart = new google.visualization.ImageLineChart(document.getElementById('on_off_chart'));
+		var chart = new google.charts.Line(document.getElementById('on_off_chart'));
 
         chart.draw(data, options);
       }
